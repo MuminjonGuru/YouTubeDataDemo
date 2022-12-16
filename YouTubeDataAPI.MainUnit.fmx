@@ -1,0 +1,389 @@
+object FormMain: TFormMain
+  Left = 0
+  Top = 0
+  Caption = 'YouTube Data API'
+  ClientHeight = 580
+  ClientWidth = 637
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object EditChannelID: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    Text = 'YouTube Channel ID'
+    TextSettings.Font.Size = 14.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 617.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object EditVideoID: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 0
+    Text = 'YouTube Video ID'
+    TextSettings.Font.Size = 14.000000000000000000
+    Position.X = 8.000000000000000000
+    Position.Y = 49.000000000000000000
+    Size.Width = 617.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object BtnFetch: TButton
+    StyledSettings = [Family, FontColor]
+    Position.X = 512.000000000000000000
+    Position.Y = 90.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 31.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Fetch Data'
+    TextSettings.Font.Size = 18.000000000000000000
+    TextSettings.Font.StyleExt = {00060000000000000004000000}
+    OnClick = BtnFetchClick
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      '{'
+      '    "author": {'
+      '        "avatar": ['
+      '            {'
+      '                "height": 48,'
+      
+        '                "url": "https://yt3.ggpht.com/ko51WXrdZpsCIUi1BU' +
+        'TaBVQtz3ussKnidcmC08nzGYxGnIBOtFaky8KMULRvmU0-jbRM_nemdw=s48-c-k' +
+        '-c0x00ffffff-no-rj",'
+      '                "width": 48'
+      '            },'
+      '            {'
+      '                "height": 88,'
+      
+        '                "url": "https://yt3.ggpht.com/ko51WXrdZpsCIUi1BU' +
+        'TaBVQtz3ussKnidcmC08nzGYxGnIBOtFaky8KMULRvmU0-jbRM_nemdw=s88-c-k' +
+        '-c0x00ffffff-no-rj",'
+      '                "width": 88'
+      '            },'
+      '            {'
+      '                "height": 176,'
+      
+        '                "url": "https://yt3.ggpht.com/ko51WXrdZpsCIUi1BU' +
+        'TaBVQtz3ussKnidcmC08nzGYxGnIBOtFaky8KMULRvmU0-jbRM_nemdw=s176-c-' +
+        'k-c0x00ffffff-no-rj",'
+      '                "width": 176'
+      '            }'
+      '        ],'
+      '        "badges": [],'
+      '        "canonicalBaseUrl": "/@EmbarcaderoTech",'
+      '        "channelId": "UCMmsCQhkz-WlJ-IVBzPhbgA",'
+      '        "stats": {'
+      '            "subscribers": 38700,'
+      '            "subscribersText": "38.7K subscribers"'
+      '        },'
+      '        "title": "Embarcadero Technologies"'
+      '    },'
+      '    "captions": ['
+      '        {'
+      '            "language": {'
+      '                "code": "en",'
+      '                "name": "English (auto-generated)"'
+      '            },'
+      
+        '            "url": "https://www.youtube.com/api/timedtext?v=rv2a' +
+        'VSLsuW0&caps=asr&xoaf=5&hl=en&ip=0.0.0.0&ipbits=0&expire=1671237' +
+        '951&sparams=ip,ipbits,expire,v,caps,xoaf&signature=AAA2F593AD81D' +
+        '58A7AB802D7FB3F50761A73CDCE.6F3DEEF7995BB8EA9E265DC9F974148023A1' +
+        'BDC4&key=yt8&kind=asr&lang=en"'
+      '        }'
+      '    ],'
+      '    "cards": ['
+      '        {'
+      '            "label": "by Embarcadero Technologies",'
+      '            "type": "video",'
+      '            "video": {'
+      '                "lengthSeconds": 6763,'
+      '                "stats": {'
+      '                    "views": 8818'
+      '                },'
+      '                "thumbnails": ['
+      '                    {'
+      '                        "height": 94,'
+      
+        '                        "url": "https://i.ytimg.com/vi/m8BgxJ81G' +
+        'Dk/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAE' +
+        'G&rs=AOn4CLDMl7sFJENqFGtjVpi4aX2C0JVA3A",'
+      '                        "width": 168'
+      '                    },'
+      '                    {'
+      '                        "height": 110,'
+      
+        '                        "url": "https://i.ytimg.com/vi/m8BgxJ81G' +
+        'Dk/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAE' +
+        'G&rs=AOn4CLBzYZvBof21H6udywyUyAvv5IqqAw",'
+      '                        "width": 196'
+      '                    },'
+      '                    {'
+      '                        "height": 138,'
+      
+        '                        "url": "https://i.ytimg.com/vi/m8BgxJ81G' +
+        'Dk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcA' +
+        'BBg==&rs=AOn4CLABtp-AMItNweQym9wY_QFjovD3pw",'
+      '                        "width": 246'
+      '                    },'
+      '                    {'
+      '                        "height": 188,'
+      
+        '                        "url": "https://i.ytimg.com/vi/m8BgxJ81G' +
+        'Dk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcA' +
+        'BBg==&rs=AOn4CLD2CeLzFpdUufzE9SAAmVovH3YWgA",'
+      '                        "width": 336'
+      '                    },'
+      '                    {'
+      '                        "height": 1080,'
+      
+        '                        "url": "https://i.ytimg.com/vi/m8BgxJ81G' +
+        'Dk/maxresdefault.jpg",'
+      '                        "width": 1920'
+      '                    }'
+      '                ],'
+      
+        '                "title": "See What'#39's New in Delphi, C++Builder, ' +
+        'and RAD Studio 11.2 Alexandria",'
+      '                "videoId": "m8BgxJ81GDk"'
+      '            }'
+      '        }'
+      '    ],'
+      '    "category": "Science & Technology",'
+      '    "chapters": [],'
+      
+        '    "description": "The iOS Simulator support enables developers' +
+        ' to test and debug their Delphi applications on different Apple ' +
+        'devices and on multiple form factors using the iOS Simulator, wi' +
+        'thout the need to buy the specific hardware. It also helps fulfi' +
+        'll the Apple Store request to provide screenshots of the apps ru' +
+        'nning in multiple form factors.\n\nNew in Delphi 11.2 Alexandria' +
+        '\n\nLearn more about Embarcadero Technologies products at https:' +
+        '//embarcadero.com",'
+      '    "endScreen": {'
+      '        "items": ['
+      '            {'
+      '                "channel": {'
+      '                    "avatar": ['
+      '                        {'
+      '                            "height": 250,'
+      
+        '                            "url": "https://yt3.ggpht.com/ko51WX' +
+        'rdZpsCIUi1BUTaBVQtz3ussKnidcmC08nzGYxGnIBOtFaky8KMULRvmU0-jbRM_n' +
+        'emdw=s250-c-k-c0x00ffffff-no-rj",'
+      '                            "width": 250'
+      '                        },'
+      '                        {'
+      '                            "height": 400,'
+      
+        '                            "url": "https://yt3.ggpht.com/ko51WX' +
+        'rdZpsCIUi1BUTaBVQtz3ussKnidcmC08nzGYxGnIBOtFaky8KMULRvmU0-jbRM_n' +
+        'emdw=s400-c-k-c0x00ffffff-no-rj",'
+      '                            "width": 400'
+      '                        }'
+      '                    ],'
+      '                    "channelId": "UCMmsCQhkz-WlJ-IVBzPhbgA",'
+      
+        '                    "description": "Embarcadero Technologies Inc' +
+        '., empowers application developers and database professionals wi' +
+        'th database tools to design, build, and run software application' +
+        's in the environment they choose. A community of more than three' +
+        ' million worldwide and 90 of the Fortune 100 rely on Embarcadero' +
+        ' CodeGear\u2122 and DatabaseGear\u2122 product lines to increase' +
+        ' productivity, openly collaborate, and be free to innovate. Foun' +
+        'ded in 1993, Embarcadero is headquartered in Austin, Texas, with' +
+        ' offices located around the world.",'
+      '                    "title": "Embarcadero Technologies"'
+      '                },'
+      '                "type": "channel"'
+      '            },'
+      '            {'
+      '                "type": "video",'
+      '                "video": {'
+      '                    "lengthSeconds": 4972,'
+      '                    "stats": {'
+      '                        "views": 1340'
+      '                    },'
+      '                    "thumbnails": ['
+      '                        {'
+      '                            "height": 94,'
+      
+        '                            "url": "https://i.ytimg.com/vi/ClWIX' +
+        'P8aBmQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXA' +
+        'BwAEG&rs=AOn4CLBPLO3L-MK7e3_Hfrpw8PUDcd0wSA",'
+      '                            "width": 168'
+      '                        },'
+      '                        {'
+      '                            "height": 110,'
+      
+        '                            "url": "https://i.ytimg.com/vi/ClWIX' +
+        'P8aBmQ/hqdefault.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXA' +
+        'BwAEG&rs=AOn4CLDkxutMQexRCYLVm_TV9cy5Oj68uA",'
+      '                            "width": 196'
+      '                        },'
+      '                        {'
+      '                            "height": 138,'
+      
+        '                            "url": "https://i.ytimg.com/vi/ClWIX' +
+        'P8aBmQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAF' +
+        'wAcABBg==&rs=AOn4CLCiWYj8m3aJkrrKbQqsbhEOMPsizA",'
+      '                            "width": 246'
+      '                        },'
+      '                        {'
+      '                            "height": 188,'
+      
+        '                            "url": "https://i.ytimg.com/vi/ClWIX' +
+        'P8aBmQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAF' +
+        'wAcABBg==&rs=AOn4CLDMzOn8UxMxppMMUoBs4cosDoywBg",'
+      '                            "width": 336'
+      '                        },'
+      '                        {'
+      '                            "height": 1080,'
+      
+        '                            "url": "https://i.ytimg.com/vi/ClWIX' +
+        'P8aBmQ/maxresdefault.jpg",'
+      '                            "width": 1920'
+      '                        }'
+      '                    ],'
+      
+        '                    "title": "Adding Mobile Support to Existing ' +
+        'Desktop Applications",'
+      '                    "videoId": "ClWIXP8aBmQ"'
+      '                }'
+      '            }'
+      '        ]'
+      '    },'
+      '    "isLiveContent": false,'
+      '    "isLiveNow": false,'
+      '    "keywords": ['
+      '        "Embarcadero",'
+      '        "mobile development",'
+      '        "embarcadero technologies",'
+      '        "application development",'
+      '        "Software Development",'
+      '        "Delphi",'
+      '        "C++Builder",'
+      '        "C++",'
+      '        "Databases",'
+      '        "InterBase",'
+      '        "SQL",'
+      '        "Pascal",'
+      '        "Object Pascal",'
+      '        "Delphi (Programming Language)",'
+      '        "Windows Programming",'
+      '        "iOS Programming",'
+      '        "Android Programming",'
+      '        "Linux Programming",'
+      '        "macOS Programming"'
+      '    ],'
+      '    "lengthSeconds": 103,'
+      '    "musics": [],'
+      '    "publishedDate": "2022-09-07",'
+      '    "stats": {'
+      '        "comments": 0,'
+      '        "likes": 107,'
+      '        "views": 4396'
+      '    },'
+      '    "superTitle": {'
+      '        "items": ['
+      '            "RAD Studio 11"'
+      '        ]'
+      '    },'
+      '    "thumbnails": ['
+      '        {'
+      '            "height": 94,'
+      
+        '            "url": "https://i.ytimg.com/vi/rv2aVSLsuW0/hqdefault' +
+        '.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB' +
+        'HQdXaE3z4CK7hhHc0DjseDAj6Gg",'
+      '            "width": 168'
+      '        },'
+      '        {'
+      '            "height": 110,'
+      
+        '            "url": "https://i.ytimg.com/vi/rv2aVSLsuW0/hqdefault' +
+        '.jpg?sqp=-oaymwEbCMQBEG5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLC' +
+        'nIrpv7I7JwqvBMHS3SrOnzHCiAg",'
+      '            "width": 196'
+      '        },'
+      '        {'
+      '            "height": 138,'
+      
+        '            "url": "https://i.ytimg.com/vi/rv2aVSLsuW0/hqdefault' +
+        '.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn' +
+        '4CLC3FY9HGUm6k-ws7yzRyaR-jkfXDg",'
+      '            "width": 246'
+      '        },'
+      '        {'
+      '            "height": 188,'
+      
+        '            "url": "https://i.ytimg.com/vi/rv2aVSLsuW0/hqdefault' +
+        '.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn' +
+        '4CLDVKysgPbQx4gMKjF24yObUtXyxNg",'
+      '            "width": 336'
+      '        },'
+      '        {'
+      '            "height": 1080,'
+      
+        '            "url": "https://i.ytimg.com/vi_webp/rv2aVSLsuW0/maxr' +
+        'esdefault.webp",'
+      '            "width": 1920'
+      '        }'
+      '    ],'
+      '    "title": "iOS Simulator in Delphi 11.2 Alexandria",'
+      '    "videoId": "rv2aVSLsuW0"'
+      '}')
+    Position.X = 72.000000000000000000
+    Position.Y = 184.000000000000000000
+    Size.Width = 497.000000000000000000
+    Size.Height = 377.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Viewport.Width = 477.000000000000000000
+    Viewport.Height = 357.000000000000000000
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'utf-8, *;q=0.8'
+    BaseURL = 
+      'https://api.apilayer.com/youtube/video/details?id=rv2aVSLsuW0&ap' +
+      'ikey=b9i47fCV2hgUx5lOnJ0vWLxA6m2al78x'
+    Params = <>
+    Left = 160
+    Top = 96
+  end
+  object RESTRequest1: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTClient1
+    Params = <>
+    Response = RESTResponse1
+    Left = 272
+    Top = 96
+  end
+  object RESTResponse1: TRESTResponse
+    ContentType = 'application/json'
+    Left = 384
+    Top = 96
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 60
+    Top = 125
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = RESTResponse1
+      FieldName = 'Content'
+      Control = Memo1
+      Track = False
+    end
+  end
+end
